@@ -15,7 +15,7 @@ PlayerSettings:
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
@@ -606,11 +606,11 @@ PlayerSettings:
     Collab: 0
     ErrorHub: 0
     Hub: 0
-    UNet: 1
+    UNet: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 993475cb-3ff5-4e52-be30-8ab57a9b4fb0
+  cloudProjectId: abbb46ed-36ee-4e3d-8198-fc492c6f08b3
   projectName: "AR\u798F\u6E38"
-  organizationId: holyn
+  organizationId: 871e9208-f0dd-46c2-9aa7-147138e5c623
   cloudEnabled: 0
   enableNewInputSystem: 0
