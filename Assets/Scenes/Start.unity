@@ -318,7 +318,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1160516840}
+      - m_Target: {fileID: 1160516838}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -568,7 +568,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1160516839}
   - component: {fileID: 1160516838}
-  - component: {fileID: 1160516840}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -587,12 +586,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d67fe8eb84d86468aebefda0a1d506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serverVersion: 1.1.0
+  version: 1.1.0
   prodRemoteUrl: http://www.iyoovr.com/putuo
-  devRemoteUrl: http://192.168.1.102:8080/web/putuo
+  devRemoteUrl: http://192.168.1.102:8080/web/yiliao/data/putuo
   language: cn
   enablePopupVideo: 1
   message: {fileID: 1104783844}
   environment: 0
+  mainColor: {r: 0.15686275, g: 0.7490196, b: 1, a: 1}
+  uiGrey: {r: 0.53333336, g: 0.53333336, b: 0.53333336, a: 1}
+  bg: {fileID: 1782229396}
 --- !u!4 &1160516839
 Transform:
   m_ObjectHideFlags: 0
@@ -606,19 +610,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1160516840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1160516837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba6bde39fff0a843b1600a10d4db971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bg: {fileID: 1782229396}
-  loaded: 0
 --- !u!1 &1624759418
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +726,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: fbe2fe6d3012b4f8ba7ec02b92069209, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d8cc43bbc73cba24d90ad1818e97cad4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
