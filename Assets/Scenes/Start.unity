@@ -586,10 +586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d67fe8eb84d86468aebefda0a1d506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverVersion: 1.1.0
-  version: 1.1.0
+  serverVersion: 1.2.0
+  version: 1.2.0
   prodRemoteUrl: http://www.iyoovr.com/putuo
-  devRemoteUrl: http://192.168.1.102:8080/web/yiliao/data/putuo
+  devRemoteUrl: http://192.168.1.104:8080/web/yiliao/data/putuo
   language: cn
   enablePopupVideo: 1
   message: {fileID: 1104783844}

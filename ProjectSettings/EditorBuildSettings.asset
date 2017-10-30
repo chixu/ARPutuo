@@ -7,7 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Start.unity
+    guid: ab61e3faf5b8ed0418d5dfca85741ffb
   - enabled: 1
     path: Assets/Scenes/Selection.unity
+    guid: 634c598d3828aae47877628aa1d037c6
   - enabled: 1
     path: Assets/Scenes/Scan.unity
+    guid: 94102dc1c36665641afca45b826fcc05
+  - enabled: 1
+    path: Assets/Scenes/LvweiScan.unity
+    guid: 00000000000000000000000000000000
