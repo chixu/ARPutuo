@@ -13,6 +13,7 @@
 /Assets/AVProVideo*
 /Assets/Prefabs*
 /Assets/Scenes/Guanyin*
+!/Assets/Scenes/Guanyin.unity*
 /bin/
 /bindebug/
 *.mp4*
