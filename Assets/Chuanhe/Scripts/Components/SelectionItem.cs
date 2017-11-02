@@ -5,15 +5,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 
+public static class SelectionItemState{
+	public static string Active = "active";
+	public static string Pending = "pending";
+}
+
 public class SelectionItem : MonoBehaviour {
 	public string type;
-	public Text title;
-	public Text description;
+	public string title;
+	public string id;
+	//public Text title;
+	//public Text description;
 	public string helpLink;
 	public Image image;
 	public GameObject btnInfo;
 	private Action<SelectionItem> onClickHandler;
 	public string nextSceneName;
+	public string state;
+	public string size;
 	// Use this for initialization
 
 

@@ -30,7 +30,7 @@ public class ProgressPanel : MonoBehaviour
 		this.gameObject.SetActive (true);
 		bar.SetValue (progress);
 		//desc.text = string.Format (I18n.Translate ("loading_desc"), "");
-		desc.text = string.Format (I18n.Translate ("loading_desc"), fileSize.ToString () + "M") + cur.ToString () + "/" + total.ToString ();
+		desc.text = string.Format (I18n.Translate ("loading_desc"), fileSize.ToString ("0.00") + "M") + cur.ToString () + "/" + total.ToString ();
 	}
 
 	public void Hide ()

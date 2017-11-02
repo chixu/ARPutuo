@@ -33,6 +33,23 @@ public class OKCancelPanel : MonoBehaviour
 		isCancel = false;
 	}
 
+	public IEnumerator ShowOK (string desc = "")
+	{
+		isOK = false;
+		isCancel = false;
+		if(!string.IsNullOrEmpty(desc))
+			description.text = desc;
+		gameObject.GetChildByNameInChildren ("Cancel").SetActive (false);
+		RectTransform okTrans = gameObject.GetChildByNameInChildren ("OK").GetComponent<RectTransform> ();
+		okTrans.localPosition = okTrans.localPosition.SetX (0);
+		this.gameObject.SetActive (true);
+
+		//okCancelPanel.Show (I18n.Translate("not_in_wifi"));
+		while (!isOK && !isCancel) {
+			yield return null;
+		}
+	}
+
 	public IEnumerator Show (string desc = "")
 	{
 		isOK = false;

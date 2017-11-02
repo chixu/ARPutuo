@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scan.unity
     guid: 94102dc1c36665641afca45b826fcc05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LvweiScan.unity
-    guid: 00000000000000000000000000000000
+    guid: 560066b614b80c944b76ba308b09bc07
+  - enabled: 1
+    path: Assets/Scenes/Guanyin.unity
+    guid: f361a8a5490b28a40b51e59dfb6d7036

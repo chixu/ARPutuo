@@ -81,8 +81,8 @@ public class SelectionSceneController : MonoBehaviour
 				itemComp.nextSceneName = Xml.Attribute (item, "next", "Scan");
 				itemComp.name = title;
 				itemComp.type = Xml.Attribute (item, "type");
-				itemComp.title.text = I18n.Translate (title);
-				itemComp.description.text = I18n.Translate (desc);
+				//itemComp.title.text = I18n.Translate (title);
+				//itemComp.description.text = I18n.Translate (desc);
 				itemComp.btnInfo.SetActive (false);// (!string.IsNullOrEmpty (help));
 				itemComp.helpLink = Request.RemoteUrl + help;
 				itemComp.SetOnClick (OnItemClick);
