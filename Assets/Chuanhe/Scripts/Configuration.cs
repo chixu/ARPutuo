@@ -32,6 +32,7 @@ public class Configuration : MonoBehaviour {
 	private bool timeToLoad = true;
 	private string configStr;
 	private bool versionLoaded = false;
+	private bool loading = true;
 
 	// Use this for initialization
 	//	void Start () {
@@ -84,10 +85,20 @@ public class Configuration : MonoBehaviour {
 			Director.style.uiGrey = uiGrey;
 			OnLoaded();
 		} else {
+			loading = false;
 			if (I18n.language == Language.Chinese) {
 				message.text = "初始化失败，请检查网络连接";
 			}else
 				message.text = "Failed to initialise, please check your Internet Connection";
+		}
+	}
+
+	void Update(){
+		if (loading) {
+			int numDot = Mathf.FloorToInt (Time.frameCount / 5) % 3 + 1;
+			message.text = "正在加载资源";
+			for (int i = 0; i < numDot; i++)
+				message.text += ".";
 		}
 	}
 
@@ -108,6 +119,7 @@ public class Configuration : MonoBehaviour {
 	}
 
 	public void OnLoaded(){
+		loading = false;
 		loaded = true;
 		OnClick ();
 		//WWW www = new WWW (Request.Read ());
