@@ -28,12 +28,15 @@ public class SelectionSceneController : MonoBehaviour
 	// Use this for initialization
 	private bool enabled = true;
 	private ConfigLoader configLoader;
-
+	private GameObject canvas;
+	private GameObject loadingPanel;
 
 	void Start ()
 	{
 		ARCamera = GameObject.Find ("ARCamera").GetComponentInChildren<Camera>(true); 
 		normalCamera = GameObject.Find ("Camera").GetComponent<Camera>();
+		canvas = GameObject.Find ("Canvas");
+		loadingPanel = canvas.GetChildByName ("LoadingPanel");
 //		Debug.Log ("Start");
 		contactUs.text = I18n.Translate("select_cooperate");
 		email.text = I18n.Translate("select_email");
@@ -132,6 +135,8 @@ public class SelectionSceneController : MonoBehaviour
 			arg.Add ("type", item.type);
 			arg.Add ("name", name);
 			arg.Add ("data", Xml.GetChildByAttribute(layout.Element ("items"), "title", name));
+			if (loadingPanel)
+				loadingPanel.SetActive (true);
 			SceneManagerExtension.LoadScene (item.nextSceneName, arg);
 		}
 	}
