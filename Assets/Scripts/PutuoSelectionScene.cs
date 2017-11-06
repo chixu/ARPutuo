@@ -20,6 +20,7 @@ public class PutuoSelectionScene : MonoBehaviour
 //	public Text email;
 //	public Text contactUs;
 	public GameObject canvas;
+	private GameObject loadingPanel;
 	[HideInInspector]
 	public List<GameObject> tabs;
 	[HideInInspector]
@@ -40,6 +41,7 @@ public class PutuoSelectionScene : MonoBehaviour
 	{
 		ARCamera = GameObject.Find ("ARCamera").GetComponentInChildren<Camera>(true); 
 		normalCamera = GameObject.Find ("Camera").GetComponent<Camera>();
+		loadingPanel = canvas.GetChildByName ("LoadingPanel");
 		tabs = new List<GameObject> ();
 		tabButtons = new List<GameObject> ();
 		for (int i = 1; i <= 3; i++) {
@@ -176,6 +178,8 @@ public class PutuoSelectionScene : MonoBehaviour
 		progressPanel.Hide ();
 		Enabled = true;
 		if (!configLoader.forceBreak && !okCancelPanel.isCancel) {
+			if (loadingPanel != null)
+				loadingPanel.SetActive (true);
 			Hashtable arg = new Hashtable ();
 			arg.Add ("type", item.type);
 			arg.Add ("name", id);
