@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrackerManager {
 
 	private List<ITracker> trackers;
+	private float loadingSceneTime = -1;
 	//public static TrackerManager instant;
 
 	public TrackerManager(){
@@ -22,6 +23,23 @@ public class TrackerManager {
 			trackers [i].TrackEvent (eventName, data);
 		}
 	}
+
+	public void PrepareTrackLoadingScene(){
+		loadingSceneTime = Time.time;
+	}
+
+	public float GetLoadingSceneTime(){
+		if (loadingSceneTime != -1) {
+			return Time.time - loadingSceneTime;
+		} else
+			return -1;
+	}
+
+//	public void TrackLoadingScene(){
+//		if (loadingSceneTime != -1) {
+//			TrackEvent (TrackerEventName.SceneLoad, new Dictionary<string, object>(){{"time", Time.time-loadingSceneTime}});
+//		}
+//	}
 }
 
 public class TrackerEventName{

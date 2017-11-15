@@ -157,6 +157,7 @@ namespace Guanyin
 
 
 		void Start(){
+			Director.trackerManager.TrackEvent(TrackerEventName.SceneEnter, new Dictionary<string, object>(){{"Name", sceneName}, {"Time", Director.trackerManager.GetLoadingSceneTime()}});
 			LoadDataSet ();
 		}
 
@@ -266,6 +267,7 @@ namespace Guanyin
 		public void PlayAnimation ()
 		{
 			Debug.Log ("PlayAnimation");
+			Director.trackerManager.TrackEvent(TrackerEventName.TrackingStart, new Dictionary<string, object>(){{"Scene", sceneName}, {"Name","guanyin"}, {"Type","Object"}});
 			btnBack.SetActive (false);
 			infoPanel.SetActive (false);
 			btnInfo.SetActive (false);

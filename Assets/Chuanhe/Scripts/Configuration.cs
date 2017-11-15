@@ -60,7 +60,7 @@ public class Configuration : MonoBehaviour {
 
 	IEnumerator readConfig ()
 	{ 
-		yield return Request.ReadRemote ("version.xml", (str)=>{
+		yield return Request.ReadRemote ("../version.xml", (str)=>{
 			Debug.Log(str);
 			XElement verXml = XDocument.Parse(str).Root;
 			Version v = new Version(Xml.Attribute(verXml, "version"));

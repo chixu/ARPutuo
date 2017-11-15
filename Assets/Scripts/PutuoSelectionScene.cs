@@ -178,6 +178,7 @@ public class PutuoSelectionScene : MonoBehaviour
 		progressPanel.Hide ();
 		Enabled = true;
 		if (!configLoader.forceBreak && !okCancelPanel.isCancel) {
+			Director.trackerManager.PrepareTrackLoadingScene ();
 			if (loadingPanel != null)
 				loadingPanel.SetActive (true);
 			Hashtable arg = new Hashtable ();
